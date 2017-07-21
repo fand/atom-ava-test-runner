@@ -1,0 +1,43 @@
+{
+  "name": "atom-ava-test-runner",
+  "version": "0.0.0",
+  "description": "Run Atom package tests using AVA",
+  "license": "MIT",
+  "keywords": [
+    "atom",
+    "test",
+    "ava"
+  ],
+  "repository": "https://github.com/fand/atom-tap-test-runner",
+  "bugs": "https://github.com/fand/atom-tap-test-runner/issues",
+  "author": "fand",
+  "contributors": ["fand"],
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "debug": "^2.2.0",
+    "glob": "^7.0.5",
+    "tap-parser": "^6.0.0",
+    "tmp": "^0.0.31",
+    "through2": "^2.0.1"
+  },
+  "devDependencies": {
+    "execa": "^0.7.0",
+    "tape": "^4.6.0",
+    "xo": "^0.18.0"
+  },
+  "scripts": {
+    "lint": "xo",
+    "test-api": "tape test",
+    "test": "npm run build && npm run lint && npm run test-api"
+  },
+  "atomTestRunner": "./index.js",
+  "xo": {
+    "space": true,
+    "esnext": false
+  },
+  "remarkConfig": {
+    "plugins": ["preset-wooorm"]
+  }
+}
